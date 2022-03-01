@@ -16,7 +16,7 @@ userinputs : {
 'FileFasta : .fasta, .fa
  */
 
-function requete(fichier){
+/*function requete(fichier){
     var demo = document.getElementById("demo");
     var xhr = new XMLHttpRequest();
 
@@ -44,7 +44,37 @@ document.getElementById("Schemeform").addEventListener("submit", function (e){
 
     return false;
 })
+*/
 
+// get the form from DOM (Document object model)
+
+var form = document.getElementById("Scheme-form");
+var nom_v = document.getElementById("name_scheme");
+console.log(nom_v);
+
+form.onsubmit = function (event){
+    var xhr = new XMLHttpRequest();
+    var data = new FormData(form);
+
+    // Add extra data to form before submission
+
+    data.append("Programme_name", nom_v.value);
+
+    // open Request
+    xhr.open('POST', 'http://127.0.0.1:5000/primal');
+
+    //Send the form data
+    xhr.send();
+
+    xhr.onreadystatechange = function () {
+        if(xhr.readyState == XMLHttpRequest.DONE){
+            form.reset(); // reset form after AJAX Success.
+        }
+    }
+
+    // Dont Submit the Form
+    return false;
+}
 
  // Selection de mon Button de validation
 
