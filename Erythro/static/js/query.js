@@ -82,9 +82,9 @@ form.onsubmit = function (event){
 
     // Add extra data to form before submission
 
-    data.append("Programme_name", nom_v.value);
-    data.append("config", JSON.stringify(config));
-    data.append("FASTANAME", FASTAFILE.files[0]);
+    data.append("ProgrammeName", nom_v.value);
+    data.append("Config", JSON.stringify(config));
+    data.append("FastaName", FASTAFILE.files[0]);
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
