@@ -61,14 +61,16 @@ var PRIMER_SIZE_OPT = document.getElementById("PrimerSizeOpt");
 var AMPLICON_SIZE_MIN = document.getElementById("ProductSizeMin");
 var AMPLICON_SIZE_MAX = document.getElementById("ProductSizeMax");
 
+var FASTAFILE = document.getElementById("file-scheme");
+
 form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
     var data = new FormData(form);
 
     let config = {
         "PRIMER_SIZE_RANGES": {
-            "DEFAULT": (PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value),
-            "HIGH_GC": (PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value),
+            "DEFAULT": [PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value],
+            "HIGH_GC": [PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value],
         },
         "PRIMER_MIN_TM": PRIMER_MIN_TM.value,
         "PRIMER_MAX_TM": PRIMER_MAX_TM.value,
@@ -82,7 +84,7 @@ form.onsubmit = function (event){
 
     data.append("Programme_name", nom_v.value);
     data.append("config", JSON.stringify(config));
-    // data.append("FASTANAME", )
+    data.append("FASTANAME", FASTAFILE.files[0]);
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
