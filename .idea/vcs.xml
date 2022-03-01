@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Erythro/static/css/bootstrap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ProjetCHU_Mt_Godine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/client/static/css/bootstrap" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/static/css/bootstrap" vcs="Git" />
   </component>

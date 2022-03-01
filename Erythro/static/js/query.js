@@ -14,104 +14,60 @@ userinputs : {
 "nameOutput" : name,
 
 'FileFasta : .fasta, .fa
-
  */
 
-window.addEventListener('load', function (){
-    var nomProgramme = document.getElementById("name-scheme");
-    var file = {
-        dom : document.getElementById("file"),
-        binary : null
+function requete(fichier){
+    var demo = document.getElementById("demo");
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function (){
+        //console.log(this);
+
+        if(this.readyState == 4 && this.status == 200){
+            demo.innerHTML = this.responseText;
+        }else  if(this.readyState == 4 && this.status == 404) {
+            alert('Erreur 404 :/');
+        }
     };
 
-    // API fileReader pour accéder au contenu du fichier
+    xhr.open("GET", "http://127.0.0.1:5000/primal", true);
+    xhr.responseType = "text";
+    xhr.send();
+}
 
-    var reader = new FileReader();
+document.getElementById("Schemeform").addEventListener("submit", function (e){
+    e.preventDefault();
 
-    reader.addEventListener("load", function (){
-        file.binary = reader.result;
-    });
+    var fichierArecupérer = document.getElementById("name_scheme").value;
+    console.log(fichierArecupérer);
+    requete(fichierArecupérer);
 
-    // si le fichier est deja choisi alors on doit le lire directement
-    if(file.dom.files[0]) {
-        reader.readAsBinaryString(file.dom.files[0]);
-    }
+    return false;
+})
 
-    // sinon lisons le fichier une fois que l'user l'aurai charger
-    file.dom.addEventListener("change", function () {
-        if(reader.readyState == FileReader.LOADING){
-            reader.abort();
-        }
-        reader.readAsBinaryString(file.dom.files[0]);
-    });
 
-    // Fonction principal : SendData
+ // Selection de mon Button de validation
 
-    function sendData(){
-        console.log('coucou')
-        // s'il y a un fichier sélectionner, attendre sa lecture
-        // sinon on retarde l'exécution de la fonction
+/*let btnValidation = document.querySelector("button");
+console.log(btnValidation);
 
-        if(!file.binary && file.dom.files.length > 0){
-            setTimeout(sendData, 10);
-            return;
-        }
+btnValidation.addEventListener("click", ()=> {
 
-        // pour construire notre requête de données de formulaire en plusieurs parties
-        // nous avons besoin d'une instance de XMLHTTPRequest
+    // recuperate the Data of formulate
 
-        var XHR = new XMLHttpRequest();
+    // stocker les saisies dans le local Storage
+    localStorage.setItem("Nom du Programme", document.querySelector("#name_scheme").value);
+    console.log(document.querySelector("#name_scheme").value)
 
-        var boundary = "blob";
+    localStorage.setItem("Primer Size Min", document.querySelector("#PrimerSizeMin").value);
+    localStorage.setItem("Primer Size Opt", document.querySelector("#PrimerSizeOpt").value);
+    localStorage.setItem("Primer Size Max", document.querySelector("#PrimerSizeMax").value);
+    localStorage.setItem("Primer Tm Min", document.querySelector("#PrimerSizeMin").value);
+    localStorage.setItem("Primer Tm Opt", document.querySelector("#PrimerSizeOpt").value);
+    localStorage.setItem("Primer Tm Max", document.querySelector("#PrimerSizeMax").value);
 
-        var data="";
+    localStorage.setItem("Product Size Min", document.querySelector("#ProductSizeMin").value);
+    localStorage.setItem("Product Size Max", document.querySelector("#ProductSizeMax").value);
 
-        // si l'user à sélectionner un fichier,
-        if(file.dom.files[0]) {
-            // Lancer une partie de la request du corps
-
-            data += "--" + boundary + "\r\n";
-
-            data += 'content-disposition: form-data';
-            +'name = "' + file.dom.name + '"; '
-            + 'filename = "' + file.dom.files[0].name + '"\r\n';
-
-            data += 'Content-Type: ' + file.dom.files[0].type + '\r\n';
-
-            data += '\r\n';
-
-            data += file.binary + '\r\n';
-        }
-
-            // pour les données du nom du programme
-
-            data += "--" + boundary + "\r\n";
-
-            data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
-            data += text.value + "\r\n";
-
-            data += "--" + boundary + "--";
-
-            XHR.addEventListener('load', function (event){
-                alert('Ouais ! Données expédiées et réponse chargée.');
-            });
-
-            XHR.addEventListener('error',function (event){
-                alert('Oups! Queslque chose s\'est mal passé.');
-            });
-
-            XHR.open('POST', 'https:/example.com/cors.php');
-
-            XHR.setRequestHeader('Content-Type', 'multipart/form-data; boundatry=' +boundary);
-
-            XHR.send(data);
-
-    }
-        var form = document.getElementById("form");
-
-        form.addEventListener('submit', function (event){
-            console.log('tototo')
-            event.preventDefault();
-            sendData();
-        });
-    });
+});
+*/
