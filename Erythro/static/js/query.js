@@ -85,6 +85,9 @@ form.onsubmit = function (event){
     data.append("ProgrammeName", nom_v.value);
     data.append("Config", JSON.stringify(config));
     data.append("FastaName", FASTAFILE.files[0]);
+/*    console.log(nom_v.value);
+    console.log(JSON.stringify(config));
+    console.log(FASTAFILE.files[0]);*/
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
@@ -100,6 +103,24 @@ form.onsubmit = function (event){
 
     // Dont Submit the Form
     return false;
+}
+
+/*Fonction de validation du Fichier FASTA ENvoyer */
+
+function Validation(){
+    var FastaName = document.getElementById("fastaFile");
+    var valeur = FastaName.value;
+    var extension = /(\.fasta |\.fa)$/i;
+
+    if(!extension.exec(valeur)){
+        alert("Format de fichier non Valide");
+        FastaName.value = "";
+        return false;
+    } else {
+        if(FastaName.files && FastaName.files[0]){
+            alert('Format de fichier valide');
+        }
+    }
 }
 
 /*document.getElementById("Scheme-form").addEventListener("submit", function (e) {
