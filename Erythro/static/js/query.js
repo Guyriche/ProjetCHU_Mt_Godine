@@ -69,15 +69,15 @@ form.onsubmit = function (event){
 
     let config = {
         "PRIMER_SIZE_RANGES": {
-            "DEFAULT": [PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value],
-            "HIGH_GC": [PRIMER_SIZE_MIN.value, PRIMER_SIZE_MAX.value, PRIMER_SIZE_OPT.value],
+            "DEFAULT": [parseInt(PRIMER_SIZE_MIN.value), parseInt(PRIMER_SIZE_MAX.value), parseInt(PRIMER_SIZE_OPT.value)],
+            "HIGH_GC": [parseInt(PRIMER_SIZE_MIN.value), parseInt(PRIMER_SIZE_MAX.value), parseInt(PRIMER_SIZE_OPT.value)],
         },
-        "PRIMER_MIN_TM": PRIMER_MIN_TM.value,
-        "PRIMER_MAX_TM": PRIMER_MAX_TM.value,
-        "PRIMER_OPT_TM": PRIMER_OPT_TM.value,
+        "PRIMER_MIN_TM": parseInt(PRIMER_MIN_TM.value),
+        "PRIMER_MAX_TM": parseInt(PRIMER_MAX_TM.value),
+        "PRIMER_OPT_TM": parseInt(PRIMER_OPT_TM.value),
 
-        "AMPLICON_SIZE_MIN": AMPLICON_SIZE_MIN.value,
-        "AMPLICON_SIZE_MAX": AMPLICON_SIZE_MAX.value,
+        "AMPLICON_SIZE_MIN": parseInt(AMPLICON_SIZE_MIN.value),
+        "AMPLICON_SIZE_MAX": parseInt(AMPLICON_SIZE_MAX.value),
     }
 
     // Add extra data to form before submission
