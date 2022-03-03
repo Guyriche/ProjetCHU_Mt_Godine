@@ -85,9 +85,9 @@ form.onsubmit = function (event){
     data.append("ProgrammeName", nom_v.value);
     data.append("Config", JSON.stringify(config));
     data.append("FastaName", FASTAFILE.files[0]);
-    console.log(nom_v.value);
-    console.log(JSON.stringify(config));
-    console.log(FASTAFILE.files[0]);
+/*    console.log(nom_v.value);
+    console.log(JSON.stringify(config));*/
+    console.log((FASTAFILE.files));
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
