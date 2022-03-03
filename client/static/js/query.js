@@ -87,7 +87,6 @@ form.onsubmit = function (event){
     var files_list = [];
     for (let i = 0; i < FASTAFILE.files.length; i++){
         data.append(FASTAFILE.files[i].name, FASTAFILE.files[i]);
-        console.log(FASTAFILE.files[i].name, FASTAFILE.files[i]);
         files_list.push(FASTAFILE.files[i].name);
     }
     data.append("Files", files_list)
