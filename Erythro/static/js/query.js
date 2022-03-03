@@ -84,7 +84,7 @@ form.onsubmit = function (event){
 
     data.append("ProgrammeName", nom_v.value);
     data.append("Config", JSON.stringify(config));
-    data.append("FastaName", FASTAFILE.files[0]);
+    data.append("FastaName", FASTAFILE.files);
 /*    console.log(nom_v.value);
     console.log(JSON.stringify(config));*/
     console.log((FASTAFILE.files));
