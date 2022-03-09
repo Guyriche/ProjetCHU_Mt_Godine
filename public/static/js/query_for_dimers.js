@@ -11,7 +11,7 @@ form.onsubmit = function (event){
 
     // Add extra data to form before submission
 
-    data.append("Program_Output", nom_v.value);
+    data.append("ProgrammeName", nom_v.value);
     console.log(nom_v.value)
     var files_list_tsv = [];
     for (let i = 0; i < TSVFILE.files.length; i++){
@@ -20,7 +20,7 @@ form.onsubmit = function (event){
     }
     //data.append("Files", files_list_tsv)
     console.log(nom_v.value);
-    console.log((FASTAFILE.files));
+    console.log((TSVFILE.files));
 
         // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/dimer');
