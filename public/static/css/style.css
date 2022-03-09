@@ -25,6 +25,12 @@
 	border-radius: 6px;
 }
 
+.p-4 {
+	position: relative;
+  	color: #ffffff;
+  	font-size: 14rem;
+  	line-height: 0.9;
+}
 .booking-form .form-group {
 	position: relative;
 	margin-bottom: 20px;
@@ -174,7 +180,7 @@
 	-webkit-transition: 0.2s all;
 	transition: 0.2s all;
 }
-.booking-form  #reset {
+.booking-form  #reset  {
 	color: #fff;
 	background-color: #696969;
 	font-weight: 400;
@@ -188,6 +194,57 @@
 	transition: 0.2s all;
 }
 
+.booking-form  #resetFormDimer  {
+	color: #fff;
+	background-color: #696969;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+}
+
+.rounded .img-fluid{
+	border: solid;
+	border-radius: 20px;
+}
+
+.rounded img {
+	width: 600px;
+	height: 400px;
+	opacity: 0.7;
+	filter: blur(1px);
+}
+.container-fluid{
+	display: block;
+	margin-left: 16em;
+	margin-right: 16em;
+	text-align: center;
+	width: auto;
+}
+
+.p-5 p {
+	position: relative;
+  	color: #000000;
+  	font-size: 2rem;
+  	text-align: center;
+}
+
+.p-5 h3 {
+	position: relative;
+  	color: #ffffff;
+	font-size: 4rem;
+}
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
 	opacity: 0.9;

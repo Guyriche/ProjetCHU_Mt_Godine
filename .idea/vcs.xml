@@ -6,6 +6,7 @@
     <mapping directory="$PROJECT_DIR$/ProjetCHU_Mt_Godine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/client/Erythro/static/css/bootstrap" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/client/static/css/bootstrap" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/public/static/css/bootstrap" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/static/css/bootstrap" vcs="Git" />
   </component>
 </project>
