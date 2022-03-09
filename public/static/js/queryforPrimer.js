@@ -91,9 +91,9 @@ form.onsubmit = function (event){
     }
     data.append("Files", files_list)
     //data.append("FastaName", FASTAFILE.files);
-/*    console.log(nom_v.value);
-    console.log(JSON.stringify(config));*/
-    //console.log((FASTAFILE.files));
+    console.log(nom_v.value);
+    console.log(JSON.stringify(config));
+    console.log((FASTAFILE.files));
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
