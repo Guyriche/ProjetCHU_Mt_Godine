@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,36 +9,57 @@
 
     <!-- Google font -->
     <!--link href="https://fonts.googleapis.com/css?family=PT+sans:400" rel="stylesheet"-->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- End Bootstrap 5 -->
     <!-- Custom stylesheet -->
-    <link type="text/css" rel="stylesheet" href="../static/css/style.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="../static/css/index.css">
 
 
 </head>
 
 <body>
-    <!-- Section 1-->
-    <div id="booking" class="section">
-      <div class="section-center">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-scroll fixed-top shadow-0 border-bottom border-dark">
+      <div class="container">
+        <img src="../static/img/Logo_reduit.jpg" alt="CHU" class="img-fluid" style="width: 50px"><a class="navbar-brand" href="https://www.chuuclnamur.be/covid-19/" style="margin-bottom: -15px">CHU MT-GODINNE<i class="fab fa-mdb fa-4x"></i></a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="primers.html">Design Primers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dimers.html">Primers-Dimers</a>
+            </li>
+            <button type="button" class="btn btn-dark ms-3">Code Source</button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Section Body -->
+
+    <div id="booking" class="section-center">
         <div class="container-fluid">
             <div class="px-lg-5">
-
                 <!-- For demo purpose -->
                 <div class="row py-5">
                   <div class="col-lg-12 mx-auto">
                     <div class="text-white p-5 shadow-sm rounded banner">
-                      <h1 class="display-4">Bootstrap 4 photo gallery</h1>
-                      <p class="lead">Bootstrap photogallery snippet.</p>
+                      <h1 class="display-4">Primer Design Tools</h1>
+                      <p class="lead">Internal tool at the University Hospital</p>
                       <p class="lead">Snippet by <a href="https://bootstrapious.com/snippets" class="text-reset">
-                                    Bootstrapious</a>, Images by <a href="https://unsplash.com" class="text-reset">Unsplash</a>.
+                                    Mt-Godinne</a>, Images by <a href="https://unsplash.com" class="text-reset">Unsplash</a>.
                       </p>
                     </div>
                   </div>
@@ -47,32 +68,41 @@
 
                 <div class="row">
                     <!-- Gallery item -->
-                  <div class="col-md-6">
-                    <div class="bg-white rounded shadow-sm"><a href="primers.html"><img src="../static/img/med.jpeg" alt="" class="img-fluid card-img-top"></a>
-                      <div class="p-5">
-                        <h3 class="text-center">Design Primers</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                      </div>
+                    <div class="col-md-6">
+                        <div class="m-4">
+                            <div class="card " style="width: 300px;">
+                                <img src="../static/img/med.jpeg" class="card-img-top" alt="Sample Image">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Primers Design</h5>
+                                    <p class="card-text">A UHC-specific tool for primer design that is a critical step in designing a good PCR experiment: Primers Design</p>
+                                    <a href="primers.html" class="btn btn-primary">Validate</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                    <!-- End -->
-                    <!-- Gallery item -->
-                  <div class="col-md-6">
-                    <div class="bg-white rounded shadow-sm"><a href="dimers.html"><img src="../static/img/dimers.jpg" alt="" class="img-fluid card-img-top"></a>
-                      <div class="p-5">
-                        <h3 class="text-center">Primers-Dimers</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-                      </div>
+                    <!-- Gallery Item -->
+                    <div class="col-md-6">
+                        <div class="m-4">
+                            <div class="card" style="width: 300px;">
+                                <img src="../static/img/dimers.jpg" class="card-img-top" alt="Sample Image">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Primers-Dimers</h5>
+                                    <p class="card-text">A UHC-specific tool for primer verification builds a step that constitutes the design of correct primers: Dimers</p>
+                                    <a href="dimers.html" class="btn btn-primary">Validate</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
+
             </div>
         </div>
-      </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+    <!-- JS 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- End JS 5-->
 </body>
 </html>

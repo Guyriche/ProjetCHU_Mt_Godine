@@ -22,6 +22,7 @@
     <![endif]-->
   </head>
   <body>
+    <!-- Navbar -->
     <!-- Section 1-->
     <div id="booking" class="section">
       <div class="section-center">
@@ -47,9 +48,9 @@
                         <div class="col-md-6">
                             <div class="dropdown">
                                <select class="selectpicker show-menu-arrow" name="CONSENSUS" id="consensus" style="width: 50%">
-                                 <option selected value="default">Select CONSENSUS</option>
-                                 <option value="Human_Genome">Human Genome</option>
-                                 <option value="Bacteria">Bacteria</option>
+                                 <option selected value=" ">Select CONSENSUS</option>
+                                 <option value="human_genome">Human Genome</option>
+                                 <option value="bacteria">Bacteria</option>
                                </select>
                             </div>
                         </div>
@@ -60,7 +61,7 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <span class="form-label">Fishier FASTA</span>
-                      <input class="form-control" type="file" id="file-scheme" multiple required/>
+                      <input class="form-control" type="file" id="file-scheme" multiple name="files[]" is="drop-files" label="Deposer vos Fichiers Ici.." help=".FASTA" required/>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -157,9 +158,12 @@
             </div>
           </div>
         </div>
+        <a href="index.html" class="btn btn-primary" style="text-align: center; margin-left: 18.5%; width: 100px">Home</a>
       </div>
     </div>
-
+    <!-- Plugin to importe manay files in my input -->
+    <script type="module" src="//unpkg.com/@grafikart/drop-files-element"></script>
+    <!-- fin -->
     <script src="../static/js/queryforPrimer.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>

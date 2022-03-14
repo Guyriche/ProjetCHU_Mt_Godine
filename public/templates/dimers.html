@@ -39,7 +39,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                           <span class="form-label">Fichiers Tsv</span>
-                                          <input class="form-control" type="file" id="tsv_file" multiple required/>
+                                          <input class="form-control" type="file" id="tsv_file" multiple name="files[]" is="drop-files" label="Deposer vos Fichiers Ici.." help=".FASTA" required/>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -77,8 +77,12 @@
                     </div>
                 </div>
             </div>
+            <a href="index.html" class="btn btn-primary" style="text-align: center; margin-left: 18.5%; width: 100px">Home</a>
         </div>
     </div>
+    <!-- Plugin to importe manay files in my input -->
+    <script type="module" src="//unpkg.com/@grafikart/drop-files-element"></script>
+    <!-- fin -->
 
     <script src="../static/js/query_for_dimers.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

@@ -20,7 +20,7 @@
 }
 
 .booking-form {
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(9, 1, 9, 0.7);
 	padding: 40px;
 	border-radius: 6px;
 }
@@ -49,6 +49,9 @@
 	padding: 0px 25px;
 }
 
+.form-control #file-scheme{
+	color: #cbccce;
+}
 .booking-form #file-form{
 	padding: 3px 05px;
 	font: 3rem/1.5 "PT Sans", Arial, sans-serif;
@@ -244,6 +247,20 @@
 	position: relative;
   	color: #ffffff;
 	font-size: 4rem;
+}
+
+.dropdown .selectpicker{
+	color: #fff;
+	background-color: #0c63e4;
+	font-weight: 400;
+	height: 40px;
+	font-size: 14px;
+	border: none;
+	width: 50%;
+	border-radius: 15px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
 }
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
