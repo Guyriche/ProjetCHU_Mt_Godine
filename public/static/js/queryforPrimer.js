@@ -1,51 +1,3 @@
-/*
-userinputs : {
-"PRIMER_SIZE_RANGES" : {
-     "DEFAULT" : (MIN, MAX, OPT),
-     "HIGH_GC" : (MIN, MAX, OPT),
-},
-"PRIMER_MIN_TM" : MIN,
-"PRIMER_MAX_TM":  MAX,
-"PRIMER_OPT_TM" : OPT,
-"AMPLICON_SIZE_MIN" : MIN,
-"AMPLICON_SIZE_MAX" : MAX,
-},
-
-"nameOutput" : name,
-
-'FileFasta : .fasta, .fa
- */
-
-/*function requete(fichier){
-    var demo = document.getElementById("demo");
-    var xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function (){
-        //console.log(this);
-
-        if(this.readyState == 4 && this.status == 200){
-            demo.innerHTML = this.responseText;
-        }else  if(this.readyState == 4 && this.status == 404) {
-            alert('Erreur 404 :/');
-        }
-    };
-
-    xhr.open("GET", "http://127.0.0.1:5000/primal", true);
-    xhr.responseType = "text";
-    xhr.send();
-}
-
-document.getElementById("Schemeform").addEventListener("submit", function (e){
-    e.preventDefault();
-
-    var fichierArecupérer = document.getElementById("name_scheme").value;
-    console.log(fichierArecupérer);
-    requete(fichierArecupérer);
-
-    return false;
-})
-*/
-
 // get the form from DOM (Document object model)
 var form = document.getElementById("Scheme-form");
 var nom_v = document.getElementById("name_scheme");
@@ -105,6 +57,15 @@ form.onsubmit = function (event){
 
     xhr.onreadystatechange = function () {
         if(xhr.readyState == XMLHttpRequest.DONE){
+            if(xhr.response == 'Done'){
+                $('#myModal').addClass("loader");
+
+                setTimeout(function (){
+                    $('#myModal').addClass("finished");
+                    $('#myModal').removeClass("loader");
+                })
+                // $('#myModal').modal('hide');
+            }
             form.reset(); // reset form after AJAX Success.
         }
     }
