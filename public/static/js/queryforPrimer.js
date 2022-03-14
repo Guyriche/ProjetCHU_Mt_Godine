@@ -62,11 +62,12 @@ var AMPLICON_SIZE_MIN = document.getElementById("ProductSizeMin");
 var AMPLICON_SIZE_MAX = document.getElementById("ProductSizeMax");
 
 var FASTAFILE = document.getElementById("file-scheme");
+var CONSENSUS = document.getElementById("consensus");
 
 form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
     var data = new FormData(form);
-
+    var consensus = $(CONSENSUS).val()
     let config = {
         "PRIMER_SIZE_RANGES": {
             "DEFAULT": [parseInt(PRIMER_SIZE_MIN.value), parseInt(PRIMER_SIZE_MAX.value), parseInt(PRIMER_SIZE_OPT.value)],
@@ -78,6 +79,7 @@ form.onsubmit = function (event){
 
         "AMPLICON_SIZE_MIN": parseInt(AMPLICON_SIZE_MIN.value),
         "AMPLICON_SIZE_MAX": parseInt(AMPLICON_SIZE_MAX.value),
+        "CONSENSUS" : consensus,
     }
 
     // Add extra data to form before submission
