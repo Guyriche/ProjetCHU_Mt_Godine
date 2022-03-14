@@ -30,6 +30,15 @@ form.onsubmit = function (event){
 
     xhr.onreadystatechange = function () {
         if(xhr.readyState == XMLHttpRequest.DONE){
+            if(xhr.response == 'Done'){
+/*                $('#myModal').addClass("loader");
+
+                setTimeout(function (){
+                    $('#myModal').addClass("finished");
+                    $('#myModal').removeClass("loader");
+                })*/
+                $('#myModalDimer').modal('hide');
+            }
             form.reset(); // reset form after AJAX Success.
         }
     }

@@ -1,0 +1,78 @@
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+  background-color: #A9D6D0;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.navbar .container .img-fluid{
+  border-radius: 10px;
+}
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+}
+
+.section {
+	position: relative;
+	height: 100vh;
+}
+.section .section-center {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+#booking {
+	font-family: 'PT Sans', sans-serif;
+	background-image: url('../img/back.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  margin-top: 10%;
+}
+
+.rounded .img-fluid{
+	border: solid;
+	border-radius: 30px;
+}
+.container-fluid{
+	display: block;
+	margin-left: 16em;
+	margin-right: 16em;
+	text-align: center;
+	width: auto;
+}
+
+.container-fluid .row .m-4{
+  display: inline-block;
+  border-radius: 15px;
+}
