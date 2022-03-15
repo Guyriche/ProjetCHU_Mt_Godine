@@ -20,6 +20,7 @@ form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
     var data = new FormData(form);
     var consensus = $(CONSENSUS).val()
+
     let config = {
         "PRIMER_SIZE_RANGES": {
             "DEFAULT": [parseInt(PRIMER_SIZE_MIN.value), parseInt(PRIMER_SIZE_MAX.value), parseInt(PRIMER_SIZE_OPT.value)],

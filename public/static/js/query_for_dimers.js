@@ -3,6 +3,11 @@
 var form = document.getElementById("dimers");
 var nom_v = document.getElementById("name_output_Dimers");
 
+var DIMER_TM = document.getElementById("DimerTm")
+var DELTA_G = document.getElementById("DeltaG")
+var DIMERS_SEUIL = document.getElementById("seuilD")
+var HAIRPINS_SEUIL = document.getElementById("SeuilH")
+
 var TSVFILE = document.getElementById("tsv_file");
 
 form.onsubmit = function (event){
@@ -12,6 +17,10 @@ form.onsubmit = function (event){
     // Add extra data to form before submission
 
     data.append("ProgrammeName", nom_v.value);
+    data.append("DimerTm", DIMER_TM.value);
+    data.append("DG", DELTA_G.value);
+    data.append("ThD", DIMERS_SEUIL.value);
+    data.append("ThH", HAIRPINS_SEUIL.value);
     // console.log(nom_v.value)
     var files_list_tsv = [];
     for (let i = 0; i < TSVFILE.files.length; i++){

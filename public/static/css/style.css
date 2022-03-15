@@ -35,6 +35,17 @@
 	position: relative;
 	margin-bottom: 20px;
 }
+#Name{
+	margin-top: 45px;
+}
+.booking-form .card{
+	opacity: 0.9;
+	background-color: rgba(9, 1, 9, 0.7);
+}
+
+.booking-form .card .card-title{
+	color: #cbccce;
+}
 
 .booking-form .form-control {
 	background-color: #fff;
@@ -265,40 +276,6 @@
 .booking-form .submit-btn:hover,
 .booking-form .submit-btn:focus {
 	opacity: 0.9;
-}
-
-.loader{
-	font-size: 0;
-	height: 60px;
-	width: 60px;
-	background: transparent;
-	border: 4px solid #fff;
-	border-radius: 50%;
-	border-top-color: transparent;
-	animation: animate 1s 0.4s linear infinite;
-}
-@keyframes animate {
-	100%{
-		translate: rotate(360deg);
-	}
-}
-
-.finished{
-	font-size: 0;
-	height: 70px;
-	width: 70px;
-	border: none;
-	background: #fff;
-	position: relative;
-	animation: special 1s ease-in;
-}
-@keyframes special {
-	10%{
-		transform: scale(0.8) translateX(20px);
-	}
-	35%{
-		transform: scale(1) translateY(0px);
-	}
 }
 .modal .img-fluid {
 	width: 100%;
