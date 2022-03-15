@@ -55,6 +55,7 @@ form.onsubmit = function (event){
 
     //Send the form data
     xhr.send(data);
+    //$('#myModal').modal('show');
 
     xhr.onreadystatechange = function () {
         if(xhr.readyState == XMLHttpRequest.DONE){

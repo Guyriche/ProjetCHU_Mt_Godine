@@ -48,7 +48,7 @@ form.onsubmit = function (event){
                 })*/
                 $('#myModalDimer').modal('hide');
             }
-            form.reset(); // reset form after AJAX Success.
+            //form.reset(); // reset form after AJAX Success.
         }
     }
 
