@@ -34,12 +34,20 @@
   font-size: unset;
   height: 3.5rem;
 }
-
+#booking {
+	font-family: 'PT Sans', sans-serif;
+	background-image: url('../img/back.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+/*Css pour la partie index*/
 .section {
 	position: relative;
 	height: 100vh;
 }
-.section .section-center {
+
+.section .container{
+	max-width: 1200px;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -47,32 +55,65 @@
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-#booking {
-	font-family: 'PT Sans', sans-serif;
-	background-image: url('../img/back.jpeg');
-	background-size: cover;
+.booking-form {
+	background: rgba(9, 1, 9, 0.7);
+	padding: 40px;
+	border-radius: 50px;
+}
+
+.profile-card-2 {
+	max-width: 300px;
+	background-color: #FFF;
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 	background-position: center;
-}
-.banner {
-  background: #a770ef;
-  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
-  margin-top: 10%;
-}
-
-.rounded .img-fluid{
-	border: solid;
-	border-radius: 30px;
-}
-.container-fluid{
-	display: block;
-	margin-left: 16em;
-	margin-right: 16em;
-	text-align: center;
-	width: auto;
+	overflow:hidden;
+	position: relative;
+	margin: 10px auto;
+	cursor: pointer;
+	border-radius: 20px;
 }
 
-.container-fluid .row .m-4{
-  display: inline-block;
-  border-radius: 15px;
+.profile-card-2 img {
+	transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+	position: absolute;
+	left: 30px;
+	bottom: 70px;
+	font-size: 30px;
+	color: #000000;
+	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	font-weight: bold;
+	transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons{
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	color: #FFF;
+	transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-username{
+	position: absolute;
+	bottom: 50px;
+	left: 30px;
+	color: #000000;
+	font-size: 13px;
+	transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons .far{
+	margin: 5px;
+}
+.profile-card-2:hover .profile-name{
+	bottom: 80px;
+}
+.profile-card-2:hover .profile-username{
+	bottom: 60px;
+}
+.profile-card-2:hover .profile-icons{
+	right: 40px;
 }

@@ -14,10 +14,15 @@ form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
     var data = new FormData(form);
 
+     let config = {
+        "TEMP_C": parseInt(DIMER_TM.value)
+    }
+
     // Add extra data to form before submission
 
     data.append("ProgrammeName", nom_v.value);
-    data.append("DimerTm", DIMER_TM.value);
+    data.append("Config", JSON.stringify(config));
+    data.append("DimerTm", DIMER_TM.value)
     data.append("DG", DELTA_G.value);
     data.append("ThD", DIMERS_SEUIL.value);
     data.append("ThH", HAIRPINS_SEUIL.value);
