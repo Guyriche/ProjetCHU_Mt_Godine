@@ -16,7 +16,7 @@ var AMPLICON_SIZE_MAX = document.getElementById("ProductSizeMax");
 var FASTAFILE = document.getElementById("file-scheme");
 var CONSENSUS = document.getElementById("consensus");
 var OVERLAP = document.getElementById("targetoverlap");
-//var MODE = document.querySelector("input[name='Scheme']:checked");
+//var MODEPO = document.querySelector("input[name='Scheme']:checked");
 var MODE = document.getElementById("Normal");
 
 form.onsubmit = function (event){
