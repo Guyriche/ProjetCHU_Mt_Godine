@@ -80,10 +80,10 @@
 .profile-card-2 .profile-name {
 	position: absolute;
 	left: 30px;
-	bottom: 70px;
+	bottom: 250px;
 	font-size: 30px;
 	color: #000000;
-	text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 50px 50px rgba(0, 0, 0, 0.5);
 	font-weight: bold;
 	transition: all linear 0.25s;
 }
