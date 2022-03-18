@@ -59,21 +59,21 @@
                     <div class="row">
                         <div class="col-md-6">
                           <div class="form-checkbox">
-                            <label for="SingleScheme">
-                              <input type="radio" id="SingleScheme" name="Scheme" value="Single-scheme"/>
-                              <span></span> Single-Scheme
+                            <label for="Normal">
+                              <input type="radio" id="Normal" name="Scheme" value="Single-scheme"/>
+                              <span></span> Normal
                             </label>
 
-                            <label for="multiScheme">
-                              <input type="radio" id="multiScheme" name="Scheme" value="Multi-scheme"/>
-                              <span></span> multi-Scheme
+                            <label for="HighGC">
+                              <input type="radio" id="HighGC" name="Scheme" value="Multi-scheme"/>
+                              <span></span> High GC
                             </label>
                           </div>
                         </div>
                         <div class="col-md-6">
                             <div class="dropdown">
+                               <span class="form-label">Consensus genome</span>
                                <select class="selectpicker show-menu-arrow" name="CONSENSUS" id="consensus" style="width: 50%">
-                                 <option selected value=" ">Select CONSENSUS</option>
                                  <option value="human_genome">Human Genome</option>
                                  <option value="bacteria">Bacteria</option>
                                </select>
@@ -161,6 +161,12 @@
                               <div class="form-group">
                                 <span class="form-label">Product Size Max</span>
                                 <input class="form-control" type="number" id="ProductSizeMax" placeholder="Max"  value="420"/>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group" style="position: center">
+                                <span class="form-label">Target overlap</span>
+                                <input class="form-control" type="number" id="targetoverlap" placeholder="Min" value="380"/>
                               </div>
                             </div>
                           </div>
