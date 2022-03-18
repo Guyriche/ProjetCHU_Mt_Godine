@@ -60,12 +60,12 @@
                         <div class="col-md-6">
                           <div class="form-checkbox">
                             <label for="Normal">
-                              <input type="radio" id="Normal" name="Scheme" value="Single-scheme" checked/>
+                              <input type="radio" id="Normal" name="Scheme" value=False />
                               <span></span> Normal
                             </label>
 
                             <label for="HighGC">
-                              <input type="radio" id="HighGC" name="Scheme" value="Multi-scheme"/>
+                              <input type="radio" id="HighGC" name="Scheme" value=True />
                               <span></span> High GC
                             </label>
                           </div>
@@ -83,9 +83,8 @@
 
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="form-group" style="background-color: white; border-radius: 15px; border: dashed black;">
-
-                        <input class="form-control" type="file" id="file-scheme" multiple name="files[]" is="drop-files" placeholder="Deposer vos Fichiers Ici.." help=".FASTA" required/>
+                      <div class="form-group" style="background-color: white; border-radius: 15px; border: dashed blue;">
+                        <input class="form-control" type="file" id="file-scheme" multiple name="files[]" is="drop-files" label="Deposer vos Fichiers Ici.." help=".FASTA" required/>
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -163,6 +162,8 @@
                                 <input class="form-control" type="number" id="ProductSizeMax" placeholder="Max"  value="420"/>
                               </div>
                             </div>
+                          </div>
+                          <div class="row">
                             <div class="col-md-6">
                               <div class="form-group" style="position: center">
                                 <span class="form-label">Target overlap</span>

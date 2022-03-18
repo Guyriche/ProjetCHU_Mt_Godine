@@ -16,6 +16,8 @@ var AMPLICON_SIZE_MAX = document.getElementById("ProductSizeMax");
 var FASTAFILE = document.getElementById("file-scheme");
 var CONSENSUS = document.getElementById("consensus");
 var OVERLAP = document.getElementById("targetoverlap");
+//var MODE = document.querySelector("input[name='Scheme']:checked");
+var MODE = document.getElementById("Normal");
 
 form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
@@ -39,7 +41,9 @@ form.onsubmit = function (event){
 
     // Add extra data to form before submission
 
+    var mode = MODE.checked ? "False" : "True";
     data.append("ProgrammeName", nom_v.value);
+    data.append("Highgc", mode);
     data.append("Config", JSON.stringify(config));
     var files_list = [];
     for (let i = 0; i < FASTAFILE.files.length; i++){
@@ -51,13 +55,13 @@ form.onsubmit = function (event){
     console.log(nom_v.value);
     console.log(JSON.stringify(config));
     console.log((FASTAFILE.files));
+    console.log(mode);
 
     // open Request
     xhr.open('POST', 'http://127.0.0.1:5000/primal');
 
     //Send the form data
     xhr.send(data);
-    //$('#myModal').modal('show');
 
     xhr.onreadystatechange = function () {
         if(xhr.readyState == XMLHttpRequest.DONE){
