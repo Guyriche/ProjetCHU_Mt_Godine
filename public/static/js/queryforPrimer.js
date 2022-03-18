@@ -15,6 +15,7 @@ var AMPLICON_SIZE_MAX = document.getElementById("ProductSizeMax");
 
 var FASTAFILE = document.getElementById("file-scheme");
 var CONSENSUS = document.getElementById("consensus");
+var OVERLAP = document.getElementById("targetoverlap");
 
 form.onsubmit = function (event){
     var xhr = new XMLHttpRequest();
@@ -33,6 +34,7 @@ form.onsubmit = function (event){
         "AMPLICON_SIZE_MIN": parseInt(AMPLICON_SIZE_MIN.value),
         "AMPLICON_SIZE_MAX": parseInt(AMPLICON_SIZE_MAX.value),
         "CONSENSUS" : consensus,
+        "TARGET_OVERLAP" : parseInt(OVERLAP.value),
     }
 
     // Add extra data to form before submission
