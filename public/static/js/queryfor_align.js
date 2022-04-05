@@ -20,11 +20,13 @@ form.onsubmit = function (event){
         data.append(refs.files[i].name, refs.files[i]);
         files_refs.push(refs.files[i].name);
     }
-    //data.append("Refs", files_refs);
+    data.append("Refs", files_refs);
     data.append("Read", read.files);
 
+    console.log(files_refs)
+
         // open Request
-    xhr.open('POST', 'http://127.0.0.1:5000/align');
+    xhr.open('POST', 'http://127.0.0.1:8080/align');
 
     //Send the form data
     xhr.send(data);
@@ -47,14 +49,5 @@ form.onsubmit = function (event){
     // Dont Submit the Form
     return false;
 
-}
-
-function getFiles(var_files, listFile) {
-    var data = new FormData(form);
-    for (let i = 0; i < var_files.files.length; i++){
-        data.append(var_files.files[i].name, var_files.files[i]);
-        listFile.push(var_files.files[i].name);
-    }
-  return listFile;
 }
 
