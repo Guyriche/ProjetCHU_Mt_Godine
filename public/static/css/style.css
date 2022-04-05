@@ -222,6 +222,20 @@
 	transition: 0.2s all;
 }
 
+.booking-form  #resetFormalign  {
+	color: #fff;
+	background-color: #696969;
+	font-weight: 400;
+	height: 50px;
+	font-size: 14px;
+	border: none;
+	width: 100%;
+	border-radius: 40px;
+	text-transform: uppercase;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
 .banner {
   background: #a770ef;
   background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
