@@ -21,7 +21,7 @@ form.onsubmit = function (event){
         files_refs.push(refs.files[i].name);
     }
     data.append("Refs", files_refs);
-    data.append("Read", read.files);
+    data.append("Read", read.files[0]);
 
     console.log(files_refs)
 
